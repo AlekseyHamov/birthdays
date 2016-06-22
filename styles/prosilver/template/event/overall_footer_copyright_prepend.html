@@ -1,0 +1,35 @@
+	<!-- IF not S_IS_BOT -->
+	<!-- IF S_USER_LOGGED_IN -->
+	<!-- INCLUDECSS birthdays.css -->
+	<!-- INCLUDEJS scriptshow.js -->
+	</br>
+	</br> 
+	<form method="post" action="{S_MODE_ACTION}">
+    	<input type="button" name="birthdaysbotton" value="{BIRTHDAYBOTTON}" onclick="hideShowDiv();">
+	</form>
+	</br>
+	</br> 
+	<div id="les8_ex2" style="display: none;">		
+		<div class="forumbg forumbg-table">
+			<div class="inner">
+				<table class="table1 show-header responsive">
+				<thead>
+				<tr>
+					<th class="name"><a href="{U_SORT_NAME}">{L_NAME}</a></th>
+					<th class="name"><a href="{U_SORT_NAME}">{L_BIRTHDAYS}</a></th>
+				</thead>
+				<tbody style="text-align:left">
+		<!-- BEGIN rowbd -->
+					<tr class="<!-- IF rowbd.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->   ">
+						<td>{rowbd.NAME}</td>
+						<td>{rowbd.BIRTHDAY}</td>
+					</tr>
+		<!-- END rowbd -->
+				</tbody>
+				</table>
+				<p>{ALLUSER}</p>		
+			</div>
+	   </div>
+	</div>			
+	<!-- ENDIF -->
+	<!-- ENDIF -->

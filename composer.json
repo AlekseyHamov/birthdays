@@ -1,0 +1,28 @@
+{
+	"name": "aleksey/birthdays",
+	"type": "phpbb-extension",
+	"description": "Дни рожденья",
+	"homepage": "http://hover-club-omsk.ru",
+	"version": "0.1.0",
+	"time": "2016-02-24",
+	"license": "GPL-2.0",
+	"authors": [{
+			"name": "Aleksey",
+			"homepage": "http://hover-club-omsk.ru",
+			"role": "Developer"
+		}],
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"extra": {
+      "display-name": "Дни рожденья",
+      "soft-require": {
+         "phpbb/phpbb": ">=3.1.8"
+      },
+		 "version-check": {
+            "host": "hover-club-omsk.ru",
+            "directory": "/versions",
+            "filename": "NewYear.json"
+        }
+   }
+}

@@ -1,0 +1,13 @@
+services:
+    aleksey.birthdays.listener:
+        class: aleksey\birthdays\event\listener
+        arguments:
+            - @dbal.conn
+            - @user
+            - @config
+            - @config_text
+            - @template
+            - %core.root_path%
+            - %core.table_prefix%
+        tags:
+            - { name: event.listener }

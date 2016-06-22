@@ -1,0 +1,3 @@
+aleksey_birthdays_event:
+    pattern: /birthdays
+    defaults: { _event: aleksey.birthdays.event:birthdays_botton }
