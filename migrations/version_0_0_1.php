@@ -26,6 +26,7 @@ class version_0_0_1 extends \phpbb\db\migration\migration
 		return array(
 			// Current version
 			array('config.add', array('birthdays_version', '0.0.1')),
+			array('config.add', array('active_post_begin_day','15')),
 		);
 	}
 
