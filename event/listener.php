@@ -126,12 +126,20 @@ class listener implements EventSubscriberInterface
                     break;
                   }
                   
-			    if ($birthday>0)
+			    if ($birthday>1)
 				  {
 						$this->template->assign_block_vars('rowbd', array(
 							'ID' 				=> $row['user_id'],
 							'NAME'				=> get_user_avatar($row['user_avatar'], $row['user_avatar_type'], 25, 'auto').'</br>'.$row['username'],
 							'BIRTHDAY'				=>'Через '.($birthday).' '.$d.'  исполнится '.$yarh.$y,
+						));
+					}
+			    if ($birthday==1)
+				  {
+						$this->template->assign_block_vars('rowbd', array(
+							'ID' 				=> $row['user_id'],
+							'NAME'				=> get_user_avatar($row['user_avatar'], $row['user_avatar_type'], 25, 'auto').'</br>'.$row['username'],
+							'BIRTHDAY'				=>'Завтра исполнится '.$yarh.$y,
 						));
 					}
 				if ($birthday==0)
